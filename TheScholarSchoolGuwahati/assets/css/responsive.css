@@ -1,0 +1,134 @@
+/* =========================================
+   responsive.css
+   ========================================= */
+
+/* ---------- Tablet: ≤ 1024px ---------- */
+@media (max-width: 1024px) {
+
+  .navbar {
+    padding: 0.9rem 1.5rem;
+  }
+
+  .nav-links {
+    gap: 0.1rem;
+  }
+
+  .nav-links a {
+    padding: 0.4rem 0.65rem;
+    font-size: 0.85rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 4rem 2rem;
+    gap: 2.5rem;
+  }
+
+  .hero-image {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .about-snippet {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ---------- Mobile: ≤ 768px ---------- */
+@media (max-width: 768px) {
+
+  /* Navbar mobile */
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-actions .btn-login {
+    display: none;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 3rem 1.25rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  /* Stats bar */
+  .stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Program cards */
+  .program-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Events grid */
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Gallery grid */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Footer */
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  section {
+    padding: 3.5rem 1.25rem;
+  }
+}
+
+/* ---------- Small mobile: ≤ 480px ---------- */
+@media (max-width: 480px) {
+
+  .stats-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    padding: 0.65rem 1.3rem;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,200 @@
+/* =========================================
+   style.css — Global Base & CSS Variables
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ==========================================
+   LIGHT MODE (default)
+   ========================================== */
+:root {
+  --clr-primary:      #1a3c5e;
+  --clr-primary-lt:   #2a5f8f;
+  --clr-accent:       #e8a020;
+  --clr-accent-lt:    #f5bc50;
+
+  --clr-bg:           #eef2f7;
+  --clr-bg-alt:       #dde4ef;
+  --clr-surface:      #ffffff;
+  --clr-text:         #111827;
+  --clr-text-muted:   #4b5563;
+  --clr-border:       #9aaabe;
+
+  --font-display:     'Playfair Display', Georgia, serif;
+  --font-body:        'DM Sans', sans-serif;
+
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+
+  --shadow-sm:   0 2px 8px  rgba(0, 0, 0, 0.12);
+  --shadow-md:   0 6px 24px rgba(0, 0, 0, 0.16);
+  --shadow-lg:   0 16px 48px rgba(0, 0, 0, 0.20);
+
+  --transition:  0.3s ease;
+  --max-width:   1200px;
+}
+
+/* ==========================================
+   DARK MODE
+   ========================================== */
+body.dark {
+  --clr-bg:           #0f1623;
+  --clr-bg-alt:       #1a2333;
+  --clr-surface:      #1e2d42;
+  --clr-text:         #e8edf5;
+  --clr-text-muted:   #8a9ab5;
+  --clr-border:       #2a3a52;
+  --shadow-sm:        0 2px 8px  rgba(0, 0, 0, 0.40);
+  --shadow-md:        0 6px 24px rgba(0, 0, 0, 0.50);
+  --shadow-lg:        0 16px 48px rgba(0, 0, 0, 0.60);
+}
+
+/* ==========================================
+   RESET
+   ========================================== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  line-height: 1.7;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition);
+}
+
+ul { list-style: none; }
+
+/* ==========================================
+   TYPOGRAPHY
+   ========================================== */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  line-height: 1.2;
+  color: var(--clr-text);        /* always follows theme */
+}
+
+h1 { font-size: clamp(2rem,   5vw, 3.5rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2.4rem); }
+h3 { font-size: clamp(1.1rem, 2vw, 1.5rem); }
+
+p {
+  font-size: 1rem;
+  color: var(--clr-text-muted);
+}
+
+/* ==========================================
+   BUTTONS
+   ========================================== */
+.btn-primary {
+  display: inline-block;
+  padding: 0.75rem 1.8rem;
+  background: var(--clr-primary);
+  color: #ffffff;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.95rem;
+  border: 2px solid transparent;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.btn-primary:hover {
+  background: var(--clr-primary-lt);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 0.75rem 1.8rem;
+  border: 2px solid var(--clr-primary);
+  color: var(--clr-primary);
+  background: transparent;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all var(--transition);
+}
+
+.btn-outline:hover {
+  background: var(--clr-primary);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Dark mode btn-outline adjustment */
+body.dark .btn-outline {
+  border-color: var(--clr-primary-lt);
+  color: var(--clr-text);
+}
+
+body.dark .btn-outline:hover {
+  background: var(--clr-primary-lt);
+  color: #ffffff;
+}
+
+/* ==========================================
+   SECTION TITLE
+   ========================================== */
+.section-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+  color: var(--clr-text);
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--clr-accent);
+  border-radius: 2px;
+}
+
+/* ==========================================
+   CONTAINER & SECTION SPACING
+   ========================================== */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  padding: 5rem 2rem;
+}
+
+/* ==========================================
+   FLASH PREVENTION (set by darkmode.js)
+   ========================================== */
+html.dark-early body {
+  background-color: #0f1623;
+  color: #e8edf5;
+}

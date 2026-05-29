@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Scholar School — Guwahati</title>
+
+  <!-- Flash prevention -->
+  <script>
+    (function(){
+      var s = localStorage.getItem('gw-theme');
+      var d = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if(s === 'dark' || (!s && d)) document.documentElement.classList.add('dark-early');
+    })();
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/navbar.css"/>
+  <link rel="stylesheet" href="assets/css/footer.css"/>
+  <link rel="stylesheet" href="assets/css/animations.css"/>
+  <link rel="stylesheet" href="assets/css/responsive.css"/>
+  <link rel="stylesheet" href="assets/css/pages/home.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- ───── NAVBAR ───── -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/logos/logo.jpg" alt="The Scholar School Logo"/>
+      <span>The Scholar School</span>
+    </a>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="academics.html">Academics</a></li>
+      <li><a href="faculty.html">Faculty</a></li>
+      <li><a href="admissions.html">Admissions</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button id="darkmode-toggle" title="Toggle Dark Mode">🌙</button>
+      <a href="pages/auth/login.html" class="btn-login">Login</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
+  </nav>
+
+  <!-- ───── HERO ───── -->
+  <section class="hero">
+    <div class="hero-bg-image"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content reveal">
+      <p class="hero-tagline">Welcome to The Scholar School, Guwahati</p>
+      <h1 class="hero-title">Shaping Minds,<br/>Building Futures</h1>
+      <p class="hero-sub">A place where excellence meets opportunity — nurturing students to lead with knowledge, character, and purpose.</p>
+      <div class="hero-buttons">
+        <a href="admissions.html" class="btn-primary">Apply Now</a>
+        <a href="about.html" class="btn-outline btn-outline-white">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── STATS ───── -->
+  <section class="stats-bar">
+    <div class="stat reveal delay-1">
+      <h2>1200+</h2>
+      <p>Students Enrolled</p>
+    </div>
+    <div class="stat reveal delay-2">
+      <h2>80+</h2>
+      <p>Qualified Faculty</p>
+    </div>
+    <div class="stat reveal delay-3">
+      <h2>25+</h2>
+      <p>Years of Excellence</p>
+    </div>
+    <div class="stat reveal delay-4">
+      <h2>98%</h2>
+      <p>Pass Rate</p>
+    </div>
+  </section>
+
+  <!-- ───── ABOUT SNIPPET ───── -->
+  <section class="about-snippet">
+    <div class="about-text reveal">
+      <h2>About Our School</h2>
+      <p>The Scholar School, Guwahati has been a cornerstone of quality education for over two decades. We believe in holistic development — academic brilliance paired with values, creativity, and community spirit.</p>
+      <a href="about.html" class="btn-primary">Read More</a>
+    </div>
+    <div class="about-img reveal delay-2">
+      <img src="assets/images/backgrounds/school-building.png" alt="The Scholar School Building"/>
+    </div>
+  </section>
+
+  <!-- ───── ACADEMICS ───── -->
+  <section class="academics-overview">
+    <h2 class="section-title reveal">Academic Programs</h2>
+    <div class="program-cards">
+      <div class="card reveal delay-1">
+        <span class="card-icon">📚</span>
+        <h3>Primary School</h3>
+        <p>Building strong foundations with a nurturing and engaging curriculum for Classes I–V.</p>
+      </div>
+      <div class="card reveal delay-2">
+        <span class="card-icon">🔬</span>
+        <h3>Middle School</h3>
+        <p>Encouraging curiosity and critical thinking across sciences, arts, and humanities.</p>
+      </div>
+      <div class="card reveal delay-3">
+        <span class="card-icon">🎓</span>
+        <h3>Senior School</h3>
+        <p>Preparing students for board exams and beyond with focused, expert-led instruction.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── NOTICE BOARD ───── -->
+  <section class="noticeboard-section">
+    <h2 class="section-title reveal">Notice Board</h2>
+    <div class="noticeboard reveal">
+      <ul id="notices-list">
+        <li>📌 Annual Sports Day — June 10, 2026</li>
+        <li>📌 Mid-Term Exams begin — June 20, 2026</li>
+        <li>📌 Parent-Teacher Meeting — July 5, 2026</li>
+        <li>📌 School reopens after summer break — July 1, 2026</li>
+      </ul>
+      <a href="events.html" class="btn-outline">View All Notices</a>
+    </div>
+  </section>
+
+  <!-- ───── EVENTS ───── -->
+  <section class="events-teaser">
+    <h2 class="section-title reveal">Upcoming Events</h2>
+    <div class="events-grid">
+      <div class="event-card reveal delay-1">
+        <div class="event-date">Jun <strong>10</strong></div>
+        <div class="event-info">
+          <h3>Annual Sports Day</h3>
+          <p>A day of athletics, team spirit, and fun on the school grounds.</p>
+        </div>
+      </div>
+      <div class="event-card reveal delay-2">
+        <div class="event-date">Jul <strong>5</strong></div>
+        <div class="event-info">
+          <h3>Parent-Teacher Meet</h3>
+          <p>Discuss your child's progress with our faculty in a one-on-one session.</p>
+        </div>
+      </div>
+      <div class="event-card reveal delay-3">
+        <div class="event-date">Aug <strong>15</strong></div>
+        <div class="event-info">
+          <h3>Independence Day</h3>
+          <p>Flag hoisting, cultural programmes, and student speeches.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── GALLERY TEASER ───── -->
+  <section class="gallery-teaser">
+    <h2 class="section-title reveal">Life at The Scholar School</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal delay-1">
+        <img src="assets/images/gallery/img1.jpg" alt="Campus Life"/>
+        <div class="gallery-overlay"><span>Campus Life</span></div>
+      </div>
+      <div class="gallery-item reveal delay-2">
+        <img src="assets/images/gallery/img2.jpg" alt="Sports"/>
+        <div class="gallery-overlay"><span>Sports</span></div>
+      </div>
+      <div class="gallery-item reveal delay-3">
+        <img src="assets/images/gallery/img3.jpg" alt="Events"/>
+        <div class="gallery-overlay"><span>Events</span></div>
+      </div>
+      <div class="gallery-item reveal delay-4">
+        <img src="assets/images/gallery/img4.avif" alt="Classroom"/>
+        <div class="gallery-overlay"><span>Classroom</span></div>
+      </div>
+    </div>
+    <a href="gallery.html" class="btn-outline">View Full Gallery</a>
+  </section>
+
+  <!-- ───── FOOTER ───── -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/images/logos/logo.jpg" alt="The Scholar School Logo" class="footer-logo"/>
+        <h3>The Scholar School</h3>
+        <p>Empowering students to lead with knowledge and character.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>📍 Satgaon, Assam, India</p>
+        <p>📞 094477 09326</p>
+        <p>✉️ scholarschoolguwahati@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 The Scholar School, Guwahati. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ───── SCRIPTS ───── -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/darkmode.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/pages/home.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+/* =========================================
+   navbar.css
+   ========================================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 2.5rem;
+  background: var(--clr-surface);
+  border-bottom: 2px solid var(--clr-border);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  transition: background var(--transition), border-color var(--transition);
+}
+
+/* Logo */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.nav-logo img {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+
+.nav-logo span {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+  white-space: nowrap;
+}
+
+body.dark .nav-logo span {
+  color: var(--clr-accent-lt);
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  display: block;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--clr-text);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition), color var(--transition);
+}
+
+.nav-links a:hover {
+  background: var(--clr-bg-alt);
+  color: var(--clr-primary);
+}
+
+body.dark .nav-links a:hover {
+  color: var(--clr-accent-lt);
+}
+
+.nav-links a.active {
+  background: var(--clr-bg-alt);
+  color: var(--clr-accent);
+  font-weight: 600;
+}
+
+/* Actions */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+#darkmode-toggle {
+  background: var(--clr-bg-alt);
+  border: 1.5px solid var(--clr-border);
+  border-radius: var(--radius-sm);
+  padding: 0.4rem 0.65rem;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--clr-text);
+  transition: background var(--transition), border-color var(--transition);
+}
+
+#darkmode-toggle:hover {
+  background: var(--clr-border);
+}
+
+.btn-login {
+  padding: 0.5rem 1.2rem;
+  background: var(--clr-accent);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.88rem;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition), transform var(--transition);
+}
+
+.btn-login:hover {
+  background: var(--clr-accent-lt);
+  transform: translateY(-1px);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  background: none;
+  border: 1.5px solid var(--clr-border);
+  border-radius: var(--radius-sm);
+  padding: 0.3rem 0.6rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--clr-text);
+}
+
+/* Mobile open state */
+.navbar.nav-open .nav-links {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--clr-surface);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid var(--clr-border);
+  box-shadow: var(--shadow-md);
+  gap: 0.2rem;
+}
