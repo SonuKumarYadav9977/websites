@@ -133,41 +133,53 @@
    ABOUT SNIPPET
 ─────────────────────────────────────── */
 .about-snippet {
-  display: flex;
-  align-items: center;
-  gap: 4rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "text img"
+    "text-more text-more";
+  gap: 0 4rem;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 5rem 2rem;
   background: var(--clr-bg);
 }
 
-.about-text {
-  flex: 1;
+.about-text-top {
+  grid-area: text;
 }
 
-.about-text h2 {
+.about-text-bottom {
+  grid-area: text-more;
+  align-self: start;
+}
+
+.about-text-top h2,
+.about-text-bottom h2 {
   color: var(--clr-primary);
   margin-bottom: 1rem;
 }
 
-body.dark .about-text h2 {
+body.dark .about-text-top h2,
+body.dark .about-text-bottom h2 {
   color: var(--clr-text);
 }
 
-.about-text p {
+.about-text-top p,
+.about-text-bottom p {
   margin-bottom: 1.75rem;
   line-height: 1.8;
   color: var(--clr-text-muted);
 }
 
 .about-img {
-  flex: 1;
+  grid-area: img;
+  align-self: start;
+  width: 380px;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-md);
   border: 1.5px solid var(--clr-border);
-  min-height: 300px;
   background: var(--clr-bg-alt);
 }
 
@@ -178,6 +190,138 @@ body.dark .about-text h2 {
   display: block;
 }
 
+/* ───────────────────────────────────────
+   PRINCIPAL'S MESSAGE
+─────────────────────────────────────── */
+.principal-section {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  background: var(--clr-bg-alt);
+}
+
+.principal-img {
+  flex-shrink: 0;
+  width: 260px;
+  height: 300px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1.5px solid var(--clr-border);
+  box-shadow: var(--shadow-md);
+  background: var(--clr-bg);
+}
+
+.principal-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.principal-text {
+  flex: 1;
+}
+
+.section-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--clr-accent);
+  margin-bottom: 0.5rem;
+}
+
+.principal-text h2 {
+  color: var(--clr-primary);
+  margin-bottom: 1rem;
+}
+
+body.dark .principal-text h2 {
+  color: var(--clr-text);
+}
+
+.principal-text p {
+  color: var(--clr-text-muted);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.principal-name {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--clr-text) !important;
+}
+
+.principal-name span {
+  font-size: 0.85rem;
+  color: var(--clr-text-muted);
+}
+
+/* ───────────────────────────────────────
+   HUMAN WELFARE FOUNDATION
+─────────────────────────────────────── */
+.hwf-section {
+  background: var(--clr-bg);
+  padding: 5rem 2rem;
+  border-top: 4px solid var(--clr-accent);
+  border-bottom: 4px solid var(--clr-accent);
+}
+
+.hwf-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.hwf-logo {
+  flex-shrink: 0;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+}
+
+.hwf-logo img {
+  width: 100%;
+  display: block;
+}
+
+.hwf-text {
+  flex: 1;
+}
+
+.hwf-text .section-label {
+  color: var(--clr-accent);
+}
+
+.hwf-text h2 {
+  color: var(--clr-primary);
+  margin-bottom: 1rem;
+}
+
+body.dark .hwf-text h2 {
+  color: var(--clr-text);
+}
+
+.hwf-text p {
+  color: var(--clr-text-muted);
+  line-height: 1.8;
+  margin-bottom: 1.75rem;
+}
+
+.hwf-text ol {
+  color: var(--clr-text-muted);
+  line-height: 2;
+  padding-left: 1.25rem;
+  margin-bottom: 1.75rem;
+}
 /* ───────────────────────────────────────
    ACADEMICS OVERVIEW
 ─────────────────────────────────────── */

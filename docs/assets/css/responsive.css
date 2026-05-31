@@ -34,10 +34,17 @@
     justify-content: center;
   }
 
-  .about-snippet {
-    flex-direction: column;
-    gap: 2rem;
-  }
+.about-snippet {
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "img"
+    "text"
+    "text-more";
+}
+
+.about-img {
+  width: 100%;
+}
 
   .footer-top {
     grid-template-columns: 1fr 1fr;
@@ -47,6 +54,17 @@
   .footer-brand {
     grid-column: 1 / -1;
   }
+}
+
+.principal-section,
+.hwf-inner {
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.principal-img {
+  width: 100%;
+  height: 260px;
 }
 
 /* ---------- Mobile: ≤ 768px ---------- */
